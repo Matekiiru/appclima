@@ -5,11 +5,25 @@ async function buscarClimaname() {
     const resposta = await fetch(url);
     const dados = await resposta.json();
 
+    if(dados.message === "NOT_FOUND"){
+        document.getElementById("resultado").innerHTML =
+        `
+        <h1>Cidade Não existe</h1>
+        `;
+        return;
+    }
+
     document.getElementById("resultado").innerHTML = `
     <h2>Clima em ${cidade}</h2>
     <p>Temperatua: ${dados.temperature}</p>
     <p>Vento: ${dados.wind}</p>
-    <p>Descrição: ${dados.descripition}</p>
-    `;
-
+    <p>Descrição: ${dados.description}</p>
+    `
+    ;
 }
+
+ cidade.addEventListener("keypress",function(event){
+        if(event.key === "Enter" ){
+            buscarClimaname();
+        }
+    }) 

@@ -2,6 +2,9 @@ body {
     font-family: "Boldonse", system-ui;
     text-align: center;
     margin-top: 10%;
+    background-image: url("https://images.hdqwalls.com/wallpapers/clouds-summer-weather-5k-1b.jpg");
+    background-size:cover ;
+    background-repeat: no-repeat;
 }
 
 input, button {
@@ -13,4 +16,32 @@ input, button {
 #resultado{
     margin-top: 20px;
     font-size: 15;
+}
+
+.container{
+    height:  20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.caixa-busca{
+    width: 60vh;
+    padding: 15px;
+    border-radius: 20px;
+    border: 2px solid #333;
+    text-align: center;
+    background-color: white;
+}
+
+.caixa-resultado{
+    width: 60vh;
+    padding: 15px;
+    border-radius: 20px;
+    border: 2px solid #333;
+    text-align: center;
+    background-color: white;
 }
